@@ -1,0 +1,73 @@
+
+/*[MEDIA]*/
+@media (max-width: 767px) {
+    .vcenter {
+        margin-top:35px;
+    }
+    .hcenter-md div{
+		text-align: center;    	
+    }
+
+    .strip div{
+		display: grid;
+    }
+   .user-info .block, .calc .block{			
+			/*height: 150px;*/
+		}
+
+		.roulette-html #totem{
+			height:68vh;	
+			margin-top: 26%;
+		}
+}
+
+
+@media (min-width : 768px) {
+		.user-block{
+			text-align: left;
+		}
+		.mycoins{
+			text-align: center;
+		}
+		.user-info .block, .calc .block{
+			/*height: 125px;*/
+		}
+		
+    }
+
+     @media only screen and (min-width : 992px) {
+		.user-info .block, .calc .block{
+		height: 90px;
+	}
+    }
+
+    @media (min-width : 1600px) {
+		.col-xl{
+			/*zoom:1.7;		*/
+			zoom:1.5;		
+		}
+
+		.user-info .block, .calc .block {
+			zoom:0.6;
+		}
+		.page-index #scene{
+		    /*zoom: 1.5;*/
+		    -ms-transform: scale(1.5) !important; /* IE 9 */
+    		-webkit-transform: scale(1.5) !important;
+		    transform: scale(1.5) !important;
+		}
+
+		.profile-html{
+			zoom:1.4;
+		}
+		
+    }
+
+    @media (max-width : 992px) {
+    	.about-part{
+			position: relative;
+		    top: auto !important;
+		    margin-top: 0px !important;
+		}
+
+    }

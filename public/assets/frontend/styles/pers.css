@@ -1,0 +1,40 @@
+
+.character {
+	/*background-color: red;*/
+  /*background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/183204/char.png);*/
+  background-image: url(../images/poker/anim/1.png);
+  width: 960px;  height:540px; 
+  position:absolute;
+  left:50%;top:50%; 
+ transform: translate(-49%,-50%) scale(1);
+ 
+ z-index: 0;
+/* zoom:0.7;*/
+}
+
+.character2 {
+	/*background-color: red;*/
+  /*background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/183204/char.png);*/
+  background-image: url(../images/poker/anim/раздача.png);
+  width: 961px;  height:540px; 
+  position:absolute;
+  left:50%;top:50%; 
+ transform: translate(-49%,-50%) scale(1);
+ 
+ z-index: 0;
+/* zoom:0.7;*/
+}
+
+
+.anim-ball{
+	background-image: url(../images/poker/anim/splash.png);
+	position: absolute;
+	top:64%;
+	left:50%;
+	 transform: translate(-50%,-50%) scale(1.5);
+
+	width: 212px;
+	height: 184px;
+	z-index: 10000;
+}
+

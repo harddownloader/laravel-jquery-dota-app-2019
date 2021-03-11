@@ -1,0 +1,88 @@
+body{
+    background: #1c1c1c;
+}
+
+select{
+    background: #000 !important;
+    border-color: #000 !important;
+    color: #fff !important;
+}
+
+input[type="text"], input[type="search"], input[type="number"], input[type="numer"], textarea{
+    background: #000 !important;
+    border-color: #2f2f2f !important;
+}
+
+.pagination>li, .pagination>.disabled>a{
+    background-color: #1c1c1c !important;
+    border-color: #2f2f2f !important;
+}
+
+.pagination>.active>a{
+    background-color: #1c1c1c !important;
+    border-color: #2f2f2f !important;
+}
+
+.pagination>li>a{
+    background-color: #1c1c1c !important;
+    border-color: #2f2f2f !important;
+}
+
+.logo, .header{
+    background: #000;
+}
+
+.drop-down{
+    background: #000;
+    box-shadow: 10px 5px 10px #000;
+    border: 1px solid #000;
+}
+
+.dropdown-content-body li{
+    border-color: #000;
+}
+
+.dropdown-content-body li:hover{
+    border-color: #80c2fa;
+    background: #80c2fa;
+}
+
+.dropdown-content-body li:hover a{
+    color: #fff;
+}
+
+.sidebar, .sidebar .nano-content > ul > li.active > a, .sidebar .nano-content > ul > li.open > a, .sidebar .nano-content > ul > li > ul{
+    background: #070707;
+}
+
+.main .page-header, .main .page-header .breadcrumb, .card{
+    background: #101010;
+}
+
+.card-body{
+    background: #101010;
+}
+
+.table-bordered, .table > thead > tr > th{
+    border-color: #1c1c1c;
+    background: #000;
+}
+
+.table > tbody > tr > td{
+    border-color: #1c1c1c;
+}
+
+.table-striped>tbody>tr:nth-of-type(odd){
+    background: #000;
+}
+
+.disable-light{
+    position: absolute;
+    right: 160px;
+    top:13px;
+    background: #000;
+    border-radius: 3px;
+    border: none;
+    color: #8fc9fb;
+    font-weight: bold;
+}

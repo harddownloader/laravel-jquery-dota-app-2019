@@ -1,0 +1,40 @@
+
+.bandit-line{
+	 		background-image: url(../images/bandit-lines.png);
+            background-size: 100% 100%;
+            position: absolute;
+            width: auto;
+            height: auto;
+            left: 0;
+            right: 0;
+            top: 25px;
+            bottom: 25px;
+            z-index: 10000;
+
+            margin:0;
+}
+
+.line-h1{
+	margin:0% 0;
+}
+.line-h2{
+	margin:25px 0;
+}
+
+.line-tobottom{
+	bottom:0;
+}
+.line-totop{
+	top:0;
+}
+
+.line-zag-totop{
+	top: 0px;
+    bottom: 20px;
+    margin: 50px 0;
+}
+.line-zag-tobottom{
+	bottom: 0px;
+    top: 20px;
+    margin: 50px 0;
+}

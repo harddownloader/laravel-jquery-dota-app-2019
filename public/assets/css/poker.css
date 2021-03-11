@@ -1,0 +1,141 @@
+body {
+    background: #000;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.street {
+    width: 600px;
+    height: 40px;
+    border-radius: 40px;
+    border: 1px solid #fff;
+    text-align: center;
+    line-height: 40px;
+    margin: 0 auto;
+    margin-top: 50px;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 24px;
+}
+
+.table {
+    width: 1000px;
+    height: 500px;
+    background: #385830;
+    border-radius: 300px;
+    border: 20px solid #4a352d;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+li {
+    width: 70px;
+    height: 100px;
+    float: left;
+    list-style: none;
+    border: 1px solid rgba(255, 255, 255, 0.19);
+    margin-left: 23px;
+}
+li img {
+    margin: 0;
+    width: 70px;
+    height: 100px;
+}
+.user {
+    width: 214px;
+    height: 170px;
+    float: left;
+    margin-top: 342px;
+    margin-left: -214px;
+}
+.diler {
+    width: 214px;
+    height: 170px;
+    float: left;
+    margin-top: 44px;
+    margin-left: -93px;
+}
+
+.flop {
+    float: left;
+    width: 170px;
+    height: 377px;
+    margin: 62px 144px;
+}
+.flop li {
+    width: 100px;
+    height: 70px;
+    margin-top: 10px;
+    list-style: none;
+    border: 1px solid rgba(255, 255, 255, 0.19);
+}
+
+.flop li img {
+    transform: rotate(90deg); 
+    margin-left: 15px;
+    margin-top: -15px;
+}
+
+.flop li:first-child {
+    margin-top: 0;
+}
+
+.chips {
+    float: left;
+    background: url(../images/Chips.png);
+    background-size: 100px 100px;
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 100px;
+    position: absolute;
+    margin-top: 214px;
+    margin-left: 377px;
+}
+.chips span {
+    width: 100px;
+    height: 100px;
+    display: block;
+    float: left;
+    text-align: center;
+    line-height: 100px;
+    margin-left: 100px;
+    color: #fff;
+    font-size: 21px;
+}
+
+.selection {
+    display: table;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+.selection li:first-child {
+    margin-left: 0;
+}
+
+.selection li {
+    width: 200px;
+    height: 200px;
+    margin-left: 40px;
+    border : 0;
+}
+
+.selection li input {
+    width: 156px;
+    height: 30px;
+    padding: 0px 20px;
+}
+.selection li button {
+    width: 200px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.combo_name {
+    display: table;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    margin-top: -10px;
+    color: #fff;
+    font-size: 13px;
+}
+
+.selection div:first-child .title, .selection div:nth-child(2) .title { border-radius: 5px; cursor: pointer;}

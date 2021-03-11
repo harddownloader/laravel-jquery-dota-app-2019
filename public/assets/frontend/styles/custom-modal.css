@@ -1,0 +1,41 @@
+.modal.custom {
+   	outline:none;
+	margin:  auto;
+	z-index: 30100;
+}
+.modal.custom .modal-content{
+	background-color: rgba(140,108,88,0.5);
+	border-radius: 0;
+}
+.modal.custom .modal-dialog {
+    width:50%;
+    margin:auto;
+	position: relative;
+	top:20%;
+}
+.modal.custom input,
+.modal.custom textarea{
+	width: 100%;
+
+	background-color:#c3bcbb;
+	border-width:0px;
+
+	padding: 5px 15px ;
+
+	margin-bottom: 15px;
+	color:#3d3c3b;
+
+	}
+.modal.custom .modal-header,
+.modal.custom .modal-header
+{
+	border-width:0px;
+}
+
+.pad{
+	font-size: 90%;
+}
+
+.modal.custom a{
+	color:#b0a9a8;
+}

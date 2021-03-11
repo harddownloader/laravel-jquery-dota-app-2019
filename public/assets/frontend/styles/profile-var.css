@@ -1,0 +1,28 @@
+/*[VARIABLES]*/
+#roulette, #poker, #jackpot, #mycoins, #level{
+	color:#e4dad8;
+}
+
+#username{}
+
+#level-progress{
+	left:75%;
+}
+
+#promoCode{
+	width: 100%;
+	margin: 15px 0;
+
+	background-color: #212a37;
+	border-width:  0px;
+	text-align: center;
+	
+	transition: 0.5s;
+}
+
+/*roullete.html*/
+.user-info #info-level{
+	margin-left: -3px;
+	font-size: 80%;
+
+}

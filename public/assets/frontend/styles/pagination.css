@@ -1,0 +1,89 @@
+
+div#pagination{
+  position: absolute;
+  left:50%;
+  width:500px;
+  margin-left:-250px;
+  bottom: -100px;
+  
+
+  margin-bottom: 50px;
+  
+  text-align: center;
+  
+  font-size: 12pt;
+
+  color:white;
+}
+
+
+
+div#pagination> a,
+.p_hidden {
+  display: inline-block;
+ 
+  color: #c3bcbb;
+  line-height: 1.8em;
+  text-decoration: none;
+  background-color: transparent;
+  padding: 0 .5em !important;
+  border-radius: .25em;
+
+  border:1px solid #c3bcbb;
+ 
+}
+
+ #pagination .active {
+    color: white;
+    background-color: #666;
+    cursor: default;
+    pointer-events: none;
+    color:darkgrey;
+  }
+
+.p_hidden:hover a{
+      display: inline-block ;
+    }
+
+.p_hidden:hover span {
+      display: none ;
+    }
+  
+
+
+.p_hidden {
+  cursor: pointer;
+  padding: 0 !important;
+}
+.p_hidden  span {
+    /*border:1px solid #c3bcbb;
+     border-radius: .25em;*/
+    text-decoration: none;
+    padding: 0 .5em !important;
+    
+  }
+  
+.p_hidden  a {
+ color: #c3bcbb;
+ 
+  text-decoration: none;
+
+    display: none;
+    &:nth-child(2) {
+      border-radius: .25em 0 0 .25em;
+    }
+    &:last-child {
+      border-radius: 0 .25em .25em 0;
+    }
+  }
+
+  #pagination a:hover{
+    color:white;
+    /*font-weight: 600;*/
+  }
+  
+
+#pagination :first-child,
+#pagination :last-child{  
+  border-width: 0px;
+  }

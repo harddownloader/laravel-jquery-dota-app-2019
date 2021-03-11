@@ -1,0 +1,448 @@
+
+body{
+  width:100%;
+  height:100%;
+  z-index: 1;
+      overflow-y: scroll;
+    overflow-x: hidden;
+}
+#back{
+background-color:black;
+  background: url(../images/bg.png) no-repeat 50% 100%;
+
+
+ width:100%;
+ height:100%;
+  -webkit-background-size: cover;
+  background-size: cover;
+
+  z-index: -1;
+
+  position: fixed;
+
+}
+
+#btn-maxbet{
+    padding-left: 24px !important;
+}
+
+  .bandit-container{
+	 padding: 0px 50px ;
+
+   position: relative;
+   transition: 2s;
+   right:0;
+
+
+  }
+  .bandit-container .sep{
+  	position: absolute;
+  	top:0;
+  	height: 100%;
+  	min-height: 100vh;
+  	width:3px;
+
+    background: -moz-linear-dddient( top,rgba(0,0,0,0) 0%,rgba(147,147,147,1) 35%, rgba(147,147,147,1) 65%,rgba(0,0,0,0) 100%);
+    background: -webkit-linear-gradient( top, rgba(0,0,0,0) 0%,rgba(147,147,147,1) 35%, rgba(147,147,147,1) 65%,rgba(0,0,0,0) 100%);
+    background: -o-linear-gradient(  top rgba(0,0,0,0) 0%,rgba(147,147,147,1) 35%, rgba(147,147,147,1) 65%,rgba(0,0,0,0) 100%);
+    background: -ms-linear-gradient(  top,rgba(0,0,0,0) 0%,rgba(147,147,147,1) 35%, rgba(147,147,147,1) 65%,rgba(0,0,0,0) 100%);
+    background: linear-gradient( top,rgba(0,0,0,0) 0%,rgba(147,147,147,1) 35%, rgba(147,147,147,1) 65%,rgba(0,0,0,0) 100%);
+
+
+  }
+
+  .bandit-container .sep:first-child{
+  	left:0;
+  }
+  .bandit-container .sep:nth-child(2){
+  	right:0;
+  }
+  .bandit-block{
+  	display: table;
+
+  height: 1000px;
+	min-height: 340px;
+  max-height: 600px;
+	max-height: 55vh !important;
+	/*background-color: grey;*/
+	width: 100%;
+	padding: 25px 0;
+
+
+	border-top:1px solid white;
+	border-bottom:1px solid white;
+  }
+  .bandit-block .slot{
+  	display: table-cell;
+    vertical-align: top;
+  	width: 20%;
+  	height: 90%;
+
+  	/*background-color: red;*/
+  	border-left:1px solid white;
+    overflow: hidden;
+  }
+
+  .bandit-block .slot:last-child{
+  	border-right:1px solid white;
+  }
+
+  .bandit-block .slot .slot-element{
+    background: url(../images/slot/2.png) no-repeat ;
+    background-size: contain;
+    height: 33.333333%;
+    /*Ð Ð°ÑÑÑ‚Ð¾ÑÐ½Ð¸Ðµ Ð¼ÐµÐ¶Ð´Ñƒ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð°Ð¼Ð¸*/
+   background-position: center 10%;
+
+  }
+
+
+.bandit-btn{
+  border-radius: 15%;
+  text-align: center;
+  transition: 1s;
+
+}
+
+.bandit-btn:hover{
+  cursor:pointer;
+}
+  .bandit-html .mycoins div {
+    display: block;
+  }
+.scroll-slots .slot{
+   overflow-y: scroll;
+ }
+
+ .rel{
+  position: relative;
+ }
+
+.bandit-btn{
+  display: inline-block !important;
+}
+ .btn-pos-left{
+  position: absolute;
+  right:120%;
+  top:0;
+ }
+ .btn-pos-right{
+  position: absolute;
+  left:120%;
+  top:0;
+ }
+
+.row-table{
+  display: table;
+}
+
+.myButton{
+  width: 100%;
+
+  text-align: center;
+
+}
+
+#btn-spin{
+  min-height: 80px; width:100%; font-size: 120%; text-align: center; padding: 0;
+  line-height: 2;
+}
+
+.h-center{
+  text-align: center;
+}
+.height-initial{
+  height: inherit !important;
+}
+
+.side-numbers{
+position: absolute;
+    top: 50%;
+    margin-top: -45px;
+}
+.side-numbers ul{
+   list-style-type: none;
+   height: 100%;
+}
+.side-numbers ul li{
+  display: block;
+  height: 10%;
+  text-align: center;
+  cursor: default;
+}
+
+/*////////////////ANIM////////*/
+
+.bandit-shuffle .slot-element{
+  position: relative;
+  overflow:visible;
+}
+.bandit-shuffle .slot{
+  overflow:visible !important;
+}
+.bandit-shuffle .slot .slot-element{
+  display: none;
+}
+.bandit-shuffle .slot .slot-element:nth-child(1),
+.bandit-shuffle .slot .slot-element:nth-child(2),
+.bandit-shuffle .slot .slot-element:nth-child(3){
+  display: block !important;
+}
+
+/*/////////////BONUS///////////*/
+
+                .bandit-menu,
+                 .game3{
+                    display: none;
+                }
+
+                .show-menu  .bandit-menu,
+                .show-game3 .game3{
+                    display: block;
+                    background-color: rgba(0,0,0,0.2);
+                    position: absolute;
+                    left: 0px;
+                    right: 0px;
+                    top:44px;
+                    bottom: 0;
+                    z-index: 100;
+                }
+                .show-menu.show-game3  .bandit-menu{
+                    background-color: transparent;
+
+                }
+                .show-game3 .game3{
+                    /*background-color: rgba(0,0,0,0.8);*/
+                    z-index: 80;
+                    font-weight: 0;
+                    transition: 1s;
+
+                }
+                .totem1{
+                    background-image: url(../images/slot/bonus/totem1.png);
+                    background-size: 100% 100%;
+                    background-repeat: no-repeat;
+
+                    position: absolute;
+                    left:0;
+                    top:0;
+                    bottom: 0;
+                    right: 50%;
+                    margin-right: 80px;
+                }
+                .totem2{
+                    background-image: url(../images/slot/bonus/totem2.png);
+                    background-size: 100% 100%;
+                    background-repeat: no-repeat;
+
+                    position: absolute;
+                    left:50%;
+                    top:0;
+                    bottom: 0;
+                    right: 0;
+                    margin-left: 80px;
+                }
+                .selector{
+                   background-image: url(../images/slot/bonus/selector.png);
+                    background-size: 100% 100%;
+                    background-repeat: no-repeat;
+                    width: 120px;
+                    height: 120px;
+
+
+                }
+                .slot{
+                    opacity: 1;
+                    transition: 1s;
+                }
+                .show-menu .slot
+                {
+                    opacity: 0.3;
+                    //filter: blur(8px);
+                    transition: 1s;
+                }
+
+
+                .bandit-menu a{
+                    display: block;
+                    text-decoration: none !important;
+                    color:#c3bcbb;
+                    transition: 1s;
+
+                    cursor: pointer;
+
+                    font-size: 80%;
+                    font-weight: 0;
+                }
+
+                .bandit-menu a:hover{
+                    color: white;
+                    transition: 1s;
+
+                }
+
+                .pos-hcenter{
+                    position: absolute;
+                    left:50%;
+                }
+                .pos-vcenter{
+                    position: absolute;
+                    top:50%;
+                }
+                .translate{
+                    transform: translate(-50%,-50%);
+                }
+
+
+                .bandit-text-container .bandit-text{
+                    display: none ;
+                }
+
+                .show-game1 .bandit-text-container .bandit-text:nth-child(1),
+                .show-game2 .bandit-text-container .bandit-text:nth-child(2),
+                .show-game3 .bandit-text-container .bandit-text:nth-child(3){
+                    display: block !important;
+                }
+
+                .bandit-text-container{
+                  display: none;
+                }
+                .show-game1 .bandit-text-container,
+                .show-game2 .bandit-text-container,
+                .show-game3 .bandit-text-container{
+                  display: block;
+                }
+
+
+                .show-game2 .slot,
+                .show-game2 .slot:last-child{
+                  border-left: 0px solid white;
+                  border-right: 0px solid white;
+
+                }
+
+
+                .show-game3 .slot{
+                  opacity: 0;
+                }
+                .slot{
+                  opacity: 1;
+                }
+
+                #bandt-title{
+                 display: none;
+                }
+                .show-game1 #bandt-title,
+                .show-game2 #bandt-title,
+                .show-game3 #bandt-title{
+                  display: block;
+                }
+
+                .bonus-row{
+                  display: none;
+                }
+                .show-game1 .bonus-row,
+                .show-game2 .bonus-row,
+                .show-game3 .bonus-row{
+                  display: block;
+                }
+                .normal-row{
+                  display: block;
+                }
+                .show-game1 .normal-row,
+                .show-game2 .normal-row,
+                .show-game3 .normal-row{
+                  display: block;
+                }
+
+                .game3{
+                  font-size: 80%;
+                }
+                .game3 .t-spacing{
+
+                  /*line-height: 0.5em;*/
+                  letter-spacing: 15px !important;
+
+
+                }
+
+                .totem1, .totem2,
+                .totem1.disabled:hover,.totem2.disabled:hover{
+                  cursor: pointer;
+                  opacity: 0.5;
+                  transition: 1s;
+
+                }
+                .totem1.disabled:hover,.totem2.disabled:hover{
+                  cursor: default;
+
+                }
+                .totem1:hover, .totem2:hover,
+                .totem1.active, .totem2.active{
+                  opacity: 1;
+                  transition: 1s;
+                }
+
+                .show-game3.show-menu .bandit-menu .menu3{
+                  display: block;
+                }
+                .show-game3.show-menu .bandit-menu .menu,
+                .bandit-menu .menu3{
+                  display: none;
+                }
+
+
+                .bandit-menu .menu3{
+                  width: 100%;
+                  height: 100%;
+                }
+                .bandit-menu .menu3 a{
+                  display: block
+
+                }
+                .bandit-menu .menu3 a img {
+                  height: 35px;
+                }
+                .menu3 .btn{
+                  position: absolute;
+                  bottom: 0px;
+                  left: 50%;
+                }
+                .menu3 .btn{
+                  opacity: 0.7;
+                  transition: 1s;
+
+
+                }
+                .menu3 .btn:hover{
+                  opacity: 1;
+                  transition: 1s;
+
+                }
+
+                .menu3 .btn-continue{
+                  transform: translate(-100%,-50%);
+                }
+                .menu3 .btn-finish{
+                  transform: translate(0%,-50%);
+                }
+                .menu3 .btn-start{
+                  transform: translate(-50%,-50%);
+                  //bottom: 50px;
+
+                }
+
+
+                .menu3.show-start .btn-finish,
+                .menu3.show-start .btn-continue,
+                .menu3 .btn-start{
+                  display: none !important;
+                }
+                .menu3.show-start .btn-start{
+                  display: block !important;
+
+                }
+
+                .selector{
+                  transform: rotateZ(90deg);
+                }

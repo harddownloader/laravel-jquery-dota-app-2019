@@ -1,0 +1,544 @@
+
+html{
+	width:100%;
+	height:100%;
+	
+	overflow-x:hidden;
+}
+
+body{
+  width:100%;
+  height:100%;  
+  z-index: 1;
+}
+#back{
+background-color:black;
+  background: url(../images/index_bg.png) no-repeat 50% 100%;
+  
+ width:100%;
+ height:100%;
+  -webkit-background-size: cover;
+  background-size: cover;
+
+  z-index: -1;
+
+  position: fixed;
+
+}
+a:hover{
+  text-decoration: none !important;
+  color: #fff !important;
+}
+
+
+/*SPARKS*/
+#sparks-container{
+	position:fixed;
+	z-index:1000 !important;	
+}
+
+
+/*SIDEBAR*/
+/**
+ * Переключаемая боковая панель навигации
+ * выдвигающаяся справа
+ */
+
+.nav {
+    /*  ширна произвольная, не стесняйтесь экспериментировать */
+    width: 100%;
+    min-width: 100%;
+    /* фиксируем и выставляем высоту панели на максимум */
+    height: 100%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    margin: 0;
+    /* сдвигаем (прячем) панель относительно правого края страницы */
+    /*left: 100%;*/
+    /* внутренние отступы */
+    padding: 15px 20px;
+    /* плавный переход смещения панели */
+    -webkit-transition: left 1s;
+    -moz-transition: left 1s;
+     -o-transition: left 1s;
+    transition: left 1s;
+    /* определяем цвет фона панели */
+    background-color: rgba(0,0,0,0.5);
+    /* поверх других элементов */
+    z-index: 2000;
+	overflow:hidden;
+}
+
+
+
+#steam-link{
+	position: absolute;
+    left: 3%;
+	top: 3%;
+	margin-top:15px;
+	margin-right:15px;
+	text-align:center;
+}
+#steam-link img{
+	width:100px;
+}
+
+#social-icons{
+    position: absolute;
+    left: 50%;
+    bottom: 5%;
+    transform: translateX(-50%);
+    margin-left: -17px;
+}
+#social-icons a{
+	display: inline-block;
+	margin:0 25px;
+  color:#b0a9a8;
+	
+}
+#social-icons a img {
+	height:15px;
+	width:10px;
+}
+/**
+ * Кнопка переключения панели
+ * тег <label>
+ */
+.nav{
+
+overflow:visible;
+}
+.nav-toggle {
+	
+    /* абсолютно позиционируем */
+    position: fixed;
+    
+
+    /* относительно правого края панели */
+    right: 3%;
+    /* отступ от верхнего края панели */
+    top: 3%;
+    /* внутренние отступы */
+   
+    /* определяем цвет фона переключателя
+     * чаще вчего в соответствии с цветом фона панели
+    */
+    background: transparent;
+    /* цвет текста */
+    color: #b0a9a8;
+    /* вид курсора */
+    cursor: pointer;
+    /* размер шрифта */
+    font-size: 30px;
+    /* всегда поверх других элементов страницы */
+    z-index: 2001;
+    /* анимируем цвет текста при наведении */
+    -webkit-transition: color .25s ease-in-out;
+    -moz-transition: color .25s ease-in-out;
+    -o-transition: color .25s ease-in-out;
+    transition: color .25s ease-in-out;
+}
+
+/* цвет текста при наведении */
+
+.nav-toggle:hover {
+    color: #fff;
+}
+
+
+/**
+ * Скрытый чекбокс (флажок)
+ * невидим и недоступен :)
+ * имя селектора атрибут флажка
+ */
+
+[id='nav-toggle'] {
+    position: absolute;
+    display: none;
+}
+
+
+/**
+ * изменение положения переключателя
+ * при просмотре на мобильных устройствах
+ * когда навигация раскрыта, распологаем внутри панели
+*/
+
+[id='nav-toggle']:checked ~ .nav > .nav-toggle {
+   /* left: auto;
+    right: 2px;*/
+    top: 1em;
+}
+
+
+/**
+ * Когда флажок установлен, открывается панель
+ * используем псевдокласс:checked
+ */
+
+[id='nav-toggle']:checked ~ .nav {
+    left: 0%;
+    box-shadow:-4px 0px 20px 0px rgba(0,0,0, 0.5);
+    -moz-box-shadow:-4px 0px 20px 0px rgba(0,0,0, 0.5);
+    -webkit-box-shadow:-4px 0px 20px 0px rgba(0,0,0, 0.5);
+    overflow-y: auto;
+
+    
+}
+
+
+/*
+ * смещение контента страницы
+ * на размер ширины панели,
+ * фишка необязательная, на любителя
+*/
+
+[id='nav-toggle']:checked ~ main > article {
+    -webkit-transform: translateX(-320px);
+    -moz-transform: translateX(-320px);
+    -o-transform: translateX(-320px);
+    transform: translateX(-320px);
+}
+
+
+/*
+ * изменение символа переключателя,
+ * привычный крестик (MULTIPLICATION X),
+ * вы можете испльзовать любой другой значок
+*/
+
+
+/**
+ * профиксим баг в Android <= 4.1.2
+ * см: http://timpietrusky.com/advanced-checkbox-hack
+ */
+
+body {
+    -webkit-animation: bugfix infinite 1s;
+}
+
+@-webkit-keyframes bugfix {
+    to {
+      padding: 0;
+    }
+}
+
+
+/**
+ * позаботьтимся о средних и маленьких экранах
+ * мобильных устройств
+ */
+
+@media screen and (min-width: 320px) {
+    html,
+    body {
+      margin: 0;
+      overflow-x: hidden;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    html,
+    body {
+      margin: 0;
+      overflow-x: hidden;
+    }
+    .nav {
+      width: 100%;
+      box-shadow: none
+    }
+}
+
+
+
+
+
+/**
+ * формируем непосредственно само меню
+ * используем неупорядоченный список для пунктов меню
+ * прикрутим трансфомации и плавные переходы
+ */
+
+.nav > ul {
+    display: block;
+    margin: auto;
+    padding: 0;
+    list-style: none;
+	
+	height:300px;
+	width:400px;
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin-left:-200px;
+	margin-top:-150px;
+	
+}
+
+.nav > ul > li {
+    line-height: 2.5;
+    
+   	
+	padding:20px 0;
+}
+
+
+
+/* определяем интервалы появления пунктов меню */
+
+
+/**
+ * оформление ссылок пунктов меню
+ */
+
+.nav > ul > li > a {
+    display: inline-block;
+    position: relative;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+	letter-spacing:1.8em;
+    font-weight: 300;
+    font-size: 1.2em;
+    color: #b0a9a8;
+    width: 100%;
+    text-decoration: none;
+    /* плавный переход */
+    -webkit-transition: color .5s ease, padding .5s ease;
+    -moz-transition: color .5s ease, padding .5s ease;
+    -o-transition: color .5s ease, padding .5s ease;
+    transition: color .5s ease, padding .5s ease;
+	
+	display:block;
+	text-align:center;
+
+  cursor: pointer;
+}
+
+
+/**
+ * состояние ссылок меню при наведении
+ */
+
+.nav > ul > li > a:hover{
+    color: #b0a9a8;
+    padding: 15px 0;
+}
+.nav > ul > li:last-child > a:hover{
+	padding-bottom: 0;
+}
+
+.nav > ul > li > a:hover:after,
+.nav > ul > li > a:hover:before{
+	content:"-";   
+}
+/**
+ * линия подчеркивания ссылок меню
+ */
+/*
+.nav > ul > li > a:before {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 1px;
+    width: 100%;
+    -webkit-transition: width 0s ease;
+    transition: width 0s ease;
+}
+
+.nav > ul > li > a:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 1px;
+    width: 100%;
+    background: #3bc1a0;
+    -webkit-transition: width .5s ease;
+    transition: width .5s ease;
+}
+*/
+
+/**
+ * анимируем линию подчеркивания
+ * ссылок при наведении
+ */
+
+
+
+/* фон затемнения на основной контент
+ * при этом элементы блокируютя
+ * спорная такая фича, если оно вам надо
+ * просто раскомментируйте
+*/
+
+
+.blur{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    -webkit-filter: blur(10px);
+    -moz-filter: blur(10px);
+    -o-filter: blur(10px);
+    -ms-filter: blur(10px);
+    filter: blur(10px);
+	
+	transition:filter 1s;
+}
+
+.noblur{
+	
+	-webkit-filter: blur(0);
+    -moz-filter: blur(0px);
+    -o-filter: blur(0px);
+    -ms-filter: blur(0px);
+    filter: blur(0px);
+	
+	transition:filter 1s;
+}
+
+
+
+
+
+
+
+
+/*LOGO*/
+#main_logo{
+  text-align: center;
+  margin-top: 6%;
+}
+#main_logo img{
+  width: 100%;
+}
+
+
+/*MAIN CHOOSE GAME*/
+#main_ch_g{margin-top: 120px; text-align: center;}
+
+#main_ch_g_circle{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 2px solid #b0a9a8;
+  margin: 0 auto;
+
+  position: relative;
+  left:15px;
+}
+#main_ch_g_circle::after{
+  content: "";
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  border-radius: 50%;
+  border: 15px solid rgba(255,255,255,0.2);
+  box-sizing: content-box;
+  left: 50%;
+  margin-left: -65px;
+  top: 50%;
+  margin-top: -65px;
+  transform: scale(0,0);
+  transition: all 500ms;
+}
+
+.c_active::after{
+  transform: scale(1,1) !important;
+  transition: all 500ms !important;
+}
+
+.main_ch_g_ch {display: inline-block; letter-spacing: 0.3em;}
+.main_ch_g_ch a,
+.main_ch_g_ch a:focus
+{ text-decoration:none;text-transform: uppercase; color: #b0a9a8; font-size: 17px;}
+
+.main_ch_g_ch a:hover{color: #b0a9a8 !important;}
+#main_ch_g_roulette{position: absolute; top: 38px; right:160px; letter-spacing: 0.8em;}
+#main_ch_g_blackjack{position: absolute; top: 38px;left: 160px;width: 200px; }
+#main_ch_g_jackpot{margin-top: 50px; position: relative; left: 22px;letter-spacing: 0.8em;}
+#main_ch_g_blackjack_copy{display: none;}
+#main_ch_g_roulette_copy{display: none;}
+#main_ch_g_roulette::after{
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 70px;
+  background-color: #b0a9a8;
+  right: -80px;
+  top: 50%;
+  margin-top: -1px;
+  transform: scale(0,0);
+  transition: all .2s;
+}
+#main_ch_g_blackjack::after{
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 70px;
+  background-color: #b0a9a8;
+  left: -80px;
+  top: 50%;
+  margin-top: -1px;
+  transform: scale(0,0);
+  transition: all .2s;
+}
+#main_ch_g_jackpot::after{
+  content: "";
+  position: absolute;
+  height: 60px;
+  width: 1px;
+  background-color: #b0a9a8;
+  top: -65px;
+  left: 47%;
+  margin-left: -1px;
+  margin-top: -1px;
+  transform: scale(0,0);
+  transition: all .2s;
+}
+#main_ch_g_roulette:hover:after{transform: scale(1,1); transition: all .2s;}
+#main_ch_g_blackjack:hover:after{transform: scale(1,1); width: 70px; transition: all .2s;}
+#main_ch_g_jackpot:hover::after{transform: scale(1,1); transition: all .2s;}
+.game_icon img{width: 50px; height: 50px;margin-top: 25px; position: absolute;left: 50%; margin-left: -25px;top: 50%;margin-top: -25px;}
+.game_icon img{opacity: 0;-webkit-transform-origin: center; transform-origin: center; -webkit-transform: rotate3d(0, 0, 1, -200deg); transform: rotate3d(0, 0, 1, -200deg);transition: all .3s;}
+
+.active img{
+  opacity: 1;
+  -webkit-transform-origin: center;
+  transform-origin: center;
+  -webkit-transform: none;
+  transform: none;
+  transition: all .3s;
+}
+
+#click_and_start{
+  text-transform: uppercase;
+  color: #b0a9a8;
+  letter-spacing: 20px;
+  font-size: 12px;
+  text-align: center;
+  /*margin-top: 30px;
+  margin-bottom: 50px;*/
+
+  position: absolute;
+  top:30px;
+  left: 52%;
+  width: 500px;
+  margin-left:-244px;
+}
+
+.BeforeShowMenu #main_ch_g_roulette,
+.BeforeShowMenu #main_ch_g_blackjack,
+.BeforeShowMenu #click_and_start,
+.BeforeShowMenu #main_ch_g_jackpot{
+  transform: translateX(3000%);
+  opacity: 0;
+  transition: all 1s;
+}
